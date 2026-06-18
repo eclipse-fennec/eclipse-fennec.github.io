@@ -1,0 +1,14 @@
+version: 2
+updates:
+  # Keep the SHA-pinned GitHub Actions up to date (Dependabot bumps the pin
+  # and the version comment together).
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+
+  # Keep the VitePress / npm toolchain up to date.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
