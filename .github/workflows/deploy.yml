@@ -5,11 +5,8 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Allow the GITHUB_TOKEN to deploy to Pages.
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+# Least privilege: no token permissions by default; each job opts in below.
+permissions: {}
 
 # Allow one concurrent deployment; don't cancel in-progress production runs.
 concurrency:
@@ -19,10 +16,13 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read # only needs to read the repo to build
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 0 # needed for lastUpdated git timestamps
+          persist-credentials: false # don't leave the token in .git/config
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 20
@@ -38,6 +38,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write # publish to GitHub Pages
+      id-token: write # OIDC token for the Pages deployment
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
