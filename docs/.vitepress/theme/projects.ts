@@ -48,7 +48,7 @@ export const groups: ProjectGroup[] = [
       { repo: 'emf.osgi', title: 'EMF OSGi', lang: 'Java', description: 'OSGi extension for EMF — dynamic model and package registries.' },
       { repo: 'emf.util', title: 'EMF Util', lang: 'Java', description: 'Utilities and commons for Fennec EMF OSGi.' },
       { repo: 'emf.codec', title: 'EMF Codec', lang: 'Java', description: 'Jackson 3 based EMF serializer / de-serializer.' },
-      { repo: 'emf.m2x', title: 'EMF M2X', lang: 'Java', description: 'EMF validation, transformation and generation.', docs: 'https://eclipse-fennec.github.io/emf.m2x/' },
+      { repo: 'emf.m2x', title: 'EMF M2X', lang: 'Java', description: 'EMF validation, transformation and generation.', docs: 'https://eclipse-fennec.github.io/emf.m2x/index.html' },
       { repo: 'emf.persistence-jpa', title: 'EMF Persistence (JPA)', lang: 'Java', description: 'EMF JPA-like persistence using EclipseLink.' },
       { repo: 'emf.editors', title: 'EMF Editors', lang: 'Java', description: 'Custom EMF Eclipse editors.' },
       { repo: 'emf.codegen-maven', title: 'EMF Codegen (Maven)', lang: 'Java', description: 'Maven code generation for EMF OSGi.' },
