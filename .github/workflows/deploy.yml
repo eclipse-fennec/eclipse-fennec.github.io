@@ -8,10 +8,11 @@ on:
 # Least privilege: no token permissions by default; each job opts in below.
 permissions: {}
 
-# Allow one concurrent deployment; don't cancel in-progress production runs.
+# Only the latest commit to main matters for a docs site: supersede any
+# queued/running deploy so bursts of merges don't pile up.
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
