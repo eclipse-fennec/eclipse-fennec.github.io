@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { groups, repoUrl } from './projects'
+import { groups, repoUrl, docsUrl } from './projects'
 
 const langClass = (lang?: string) =>
   lang ? `lang lang-${lang.toLowerCase()}` : 'lang lang-other'
@@ -21,7 +21,7 @@ const langClass = (lang?: string) =>
           </header>
           <p class="desc">{{ p.description }}</p>
           <footer>
-            <a v-if="p.docs" :href="p.docs" class="link link-docs">Docs</a>
+            <a :href="p.docs ?? docsUrl(p.repo)" class="link link-docs">Docs</a>
             <a :href="repoUrl(p.repo)" class="link link-repo" target="_blank" rel="noreferrer">
               Repository ↗
             </a>
@@ -115,6 +115,9 @@ const langClass = (lang?: string) =>
 }
 .lang-typescript {
   background: #3178c6;
+}
+.lang-python {
+  background: #3572a5;
 }
 .lang-mixed {
   background: #6e7781;
