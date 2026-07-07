@@ -21,7 +21,11 @@ const langClass = (lang?: string) =>
           </header>
           <p class="desc">{{ p.description }}</p>
           <footer>
-            <a :href="p.docs ?? docsUrl(p.repo)" class="link link-docs">Docs</a>
+            <!-- target attribute is required: it opts out of VitePress' SPA
+                 click router, which would otherwise treat this same-origin
+                 (eclipse-fennec.github.io/<repo>/) URL as an internal route
+                 and render the landing page's own 404 until a manual reload. -->
+            <a :href="p.docs ?? docsUrl(p.repo)" class="link link-docs" target="_self">Docs</a>
             <a :href="repoUrl(p.repo)" class="link link-repo" target="_blank" rel="noreferrer">
               Repository ↗
             </a>
