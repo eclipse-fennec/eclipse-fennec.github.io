@@ -64,7 +64,6 @@ export const groups: ProjectGroup[] = [
       { repo: 'emf.codegen-maven', title: 'EMF Codegen (Maven)', lang: 'Java', description: 'Maven code generation for EMF OSGi.' },
       { repo: 'emf.osgi-mcp', title: 'EMF OSGi MCP', lang: 'Java', description: 'MCP OSGi whiteboard using EMF models as structured output.' },
       { repo: 'common.models', title: 'Common Models', lang: 'Java', description: 'Common EMF models (Ecore models).' },
-      { repo: 'model.metadata', title: 'Model Metadata', lang: 'Java', description: 'Common model metadata framework.' },
       { repo: 'camel', title: 'Camel Whiteboard', lang: 'Java', description: 'EMF Apache Camel whiteboard integration.' },
       { repo: 'fennec.bnd.libraries', title: 'BND Libraries', lang: 'Java', description: 'Fennec workspace and project libraries.' },
     ],
