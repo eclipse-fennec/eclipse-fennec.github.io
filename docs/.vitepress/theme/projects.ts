@@ -47,6 +47,7 @@ export const groups: ProjectGroup[] = [
       { repo: 'model.atlas', title: 'Model Atlas', lang: 'Java', description: 'Fennec Model Atlas — a distributed EMF model registry and repository service.' },
       { repo: 'data.atlas', title: 'Data Atlas', lang: 'Java', description: 'Fennec Data Atlas — data management service built on the Fennec stack.' },
       { repo: 'dcat.atlas', title: 'DCAT Atlas', lang: 'Java', description: 'Fennec DCAT-AP open data portal.' },
+      { repo: 'event.atlas', title: 'Event Atlas', lang: 'Java', description: 'Fennec Event Atlas — EMF extension for the Eclipse sensiNact broker.' },
     ],
   },
   {
@@ -60,6 +61,7 @@ export const groups: ProjectGroup[] = [
       { repo: 'emf.odata', title: 'EMF OData', lang: 'Java', description: 'OData protocol support for EMF models.' },
       { repo: 'emf.m2x', title: 'EMF M2X', lang: 'Java', description: 'EMF validation, transformation and generation.', docs: 'https://eclipse-fennec.github.io/emf.m2x/index.html' },
       { repo: 'emf.persistence-jpa', title: 'EMF Persistence (JPA)', lang: 'Java', description: 'EMF JPA-like persistence using EclipseLink.' },
+      { repo: 'emf.search', title: 'EMF Search', lang: 'Java', description: 'Lucene index extension for EMF.' },
       { repo: 'emf.editors', title: 'EMF Editors', lang: 'Java', description: 'Custom EMF Eclipse editors.' },
       { repo: 'emf.codegen-maven', title: 'EMF Codegen (Maven)', lang: 'Java', description: 'Maven code generation for EMF OSGi.' },
       { repo: 'emf.osgi-mcp', title: 'EMF OSGi MCP', lang: 'Java', description: 'MCP OSGi whiteboard using EMF models as structured output.' },
