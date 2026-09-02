@@ -46,12 +46,6 @@ export default defineConfig({
       provider: 'local',
     },
 
-    footer: {
-      message:
-        'Released under the EPL-2.0 License. Eclipse Fennec is part of the Eclipse Foundation.',
-      copyright: 'Copyright © Eclipse Foundation and contributors',
-    },
-
     editLink: {
       pattern:
         'https://github.com/eclipse-fennec/eclipse-fennec.github.io/edit/main/docs/:path',
